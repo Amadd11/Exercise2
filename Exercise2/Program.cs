@@ -26,9 +26,34 @@ namespace Exercise2
                     break;
                 else
                     Console.WriteLine("\nArray dapat mempunya maksimal 52 elemen.\n");
+            }
+            Console.WriteLine("");
+            Console.WriteLine("----------------------------------------------------------");
+            Console.WriteLine("Masukkan elemen Array");
+            Console.WriteLine("---------------------------------------------------------");
 
+            //Memasukkan elemen pada array
+            for(int i = 0; i < n; i++)
+            {
+                Console.Write("<" + (i + 1) + ">");
+                string s = Console.ReadLine();
+                a[i] = Int32.Parse(s);
             }
         }
+        public void Display()
+        {
+            Console.WriteLine("");
+            Console.WriteLine("----------------------------------------------");
+            Console.WriteLine(" Element array yang tersusun");
+            Console.WriteLine("----------------------------------------------");
+            for (int ms = 0; ms < n; ms++)
+            {
+                Console.WriteLine(a[ms]);
+
+            }
+            Console.WriteLine("");
+        }
+
         static void Main(string[] args)
         {
         }
