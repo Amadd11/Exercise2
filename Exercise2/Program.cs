@@ -173,9 +173,6 @@ namespace Exercise2
                         Console.WriteLine("error");
                         break;
                 }
-                //to exit from the console
-                Console.WriteLine("\n\nPress Return to exit.");
-                Console.ReadLine();
             } while (pilihanmenu != 3);
         }
     }
