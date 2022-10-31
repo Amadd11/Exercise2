@@ -97,7 +97,18 @@ namespace Exercise2
                 high--;
             }
         }
-        
+        public void SortMergeArray(int[] numbers, int left, int right)
+        {
+            int mid;
+            if (right > left)
+            {
+                mid = (right + left) / 2;
+                SortMergeArray(numbers, left, mid);
+                SortMergeArray(numbers, (mid + 1), right);
+                MergeSort(numbers, left, (mid + 1), right);
+            }
+        }
+
 
         static void Main(string[] args)
         {
