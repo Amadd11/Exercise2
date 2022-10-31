@@ -53,6 +53,51 @@ namespace Exercise2
             }
             Console.WriteLine("");
         }
+        public void BubbleSortArray()
+        {
+            for (int i = 1; i < n; i++)
+            {
+                //pada spasi i, bandingkan n -1 elemenn pertama dengan elemen selanjutnya
+                for (int ms = 0; ms < n - i; ms++)
+                {
+                    if (a[ms] > a[ms + 1]) //jika elemen tidak ada dalam ururtan  yang benar
+                    {
+                        //tukar elemen
+                        int temp;
+                        temp = a[ms];
+                        a[ms] = a[ms + 1];
+                        a[ms + 1] = temp;
+
+                    }
+                }
+            }
+        }
+        public void MergeSort(int[] numbers, int low, int mid, int high)
+        {
+            int[] temp = new int[52];
+            int i, ms, num, pos;
+            ms = (mid - 1);
+            pos = low;
+            num = (high - low + 1);
+
+            while ((low <= ms) && (mid <= high))
+            {
+                if (numbers[low] <= numbers[mid])
+                    temp[pos++] = numbers[low++];
+                else
+                    temp[pos++] = numbers[mid++];
+            }
+            while (low <= ms)
+                temp[pos++] = numbers[low++];
+            while (mid <= high)
+                temp[pos++] = numbers[mid++];
+            for (i = 0; i < num; i++)
+            {
+                numbers[high] = temp[high];
+                high--;
+            }
+        }
+        
 
         static void Main(string[] args)
         {
