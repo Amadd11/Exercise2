@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Exercise2
 {
-    class BubbleSort
+    class Program
     {
         //deklarasi array int dengan ukuran 20
         private int[] a = new int[52];
@@ -135,6 +135,49 @@ namespace Exercise2
 
         static void Main(string[] args)
         {
+            Program myList = new Program();
+            int pilihanmenu;
+            do
+            {
+                Console.WriteLine("Menu Option");
+                Console.WriteLine("==================");
+                Console.WriteLine("1.BubbleSort");
+                Console.WriteLine("2.MergeSort");
+                Console.WriteLine("3.Exit");
+                Console.Write("Enter your choice (1,2,3) : ");
+                pilihanmenu = Convert.ToInt32(Console.ReadLine());
+
+                switch (pilihanmenu)
+                {
+                    case 1:
+                        Console.WriteLine("");
+                        Console.WriteLine(".....................");
+                        Console.WriteLine("BubbleSort");
+                        Console.WriteLine(".....................");
+                        myList.Read();
+                        myList.Display();
+                        myList.BubbleSortArray();
+                        break;
+
+                    case 2:
+                        Console.WriteLine("");
+                        Console.WriteLine(".....................");
+                        Console.WriteLine("MergeSort");
+                        Console.WriteLine(".....................");
+                        myList.Displayy();
+                        break;
+                    case 3:
+                        Console.WriteLine("exit.");
+                        break;
+                    default:
+                        Console.WriteLine("error");
+                        break;
+                }
+                //to exit from the console
+                Console.WriteLine("\n\nPress Return to exit.");
+                Console.ReadLine();
+            } while (pilihanmenu != 3);
         }
     }
 }
+        
